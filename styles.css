@@ -61,8 +61,8 @@ table {
 
   @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .col-1 {width: 8.33% !important;}
-    .col-2 {width: 16.66% !important;}
+    .col-1 {width: 8.33%}
+    .col-2 {width: 16.66%}
     .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
     .col-5 {width: 41.66%;}
@@ -73,4 +73,32 @@ table {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+}
+
+.CenterContent{
+    margin: auto;
+}
+.col-12.Background{
+    background-image: url('Images/Black-Animation-Background.svg');
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+}
+
+.NameB{
+    font-family: 'ArchivoNarrowRegular';
+    font-weight: bold;
+    font-style: normal; 
+    font-size: 4em;
+    color: white;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(20vh);
+    transition: opacity 1.5s ease-in-out, transform 1.75s ease-out;
+}
+
+.NameB.visible {
+  opacity: 1;
+  transform: none;
 }
