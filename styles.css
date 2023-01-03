@@ -111,10 +111,9 @@ a:active { text-decoration: none;}
     height: 40vh;
 }
 
-.background{
+body{
     background-image: url('Images/Black-Animation-Background.svg');
-    background-size:cover;
-    height: 100vh;
+    background-size: cover;
 }
 
 .NameB{
