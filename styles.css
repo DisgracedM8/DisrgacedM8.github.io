@@ -48,18 +48,18 @@ table {
 	border-spacing: 0;
 }
 
+a:hover { text-decoration: none;}
+a:focus { text-decoration: none;}
+a:active { text-decoration: none;}
+
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
-    float: left;    
+    float: left;
+    min-height: 1px;
 }
 
-[class*="col-nav"] {
-    padding-top: 100%;  
-    padding-bottom: 100%;  
-}
-
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%}
     .col-2 {width: 16.66%}
@@ -73,16 +73,48 @@ table {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+    .col-4.nav
+    {
+        text-align: center;
+        padding-top: 1% !important;
+        padding-bottom: 1% !important;
+        transition: 1s;
+        background-color: white;
+    }
 }
 
-.CenterContent{
-    margin: auto;
+.col-4.center{
+    padding-top: 20vh;
 }
-.col-12.Background{
+
+.col-4.nav
+{
+    font-family: 'ArchivoNarrowRegular';
+    
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition: 1s;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+
+.col-4.nav:hover
+{
+    transition: 1s;
+    background-color: gray;
+}
+
+.col-12.CenterTop
+{
+    height: 40vh;
+}
+
+.background{
     background-image: url('Images/Black-Animation-Background.svg');
     background-size:cover;
     height: 100vh;
-    display: flex;
 }
 
 .NameB{
@@ -92,7 +124,6 @@ table {
     font-size: 4em;
     color: white;
     text-align: center;
-
     opacity: 0;
     transform: translateY(20vh);
     transition: opacity 1.5s ease-in-out, transform 1.75s ease-out;
