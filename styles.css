@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-image: url('Images/Black-Animation-Background.svg');
+    background-size: cover;
 }
 ol, ul {
 	list-style: none;
@@ -74,36 +76,66 @@ a:active { text-decoration: none;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    .col-4.nav
+    .col-3.nav
     {
         text-align: center;
         padding-top: 1% !important;
         padding-bottom: 1% !important;
-        transition: 1s;
-        background-color: white;
     }
 }
 
-.col-4.center{
-    padding-top: 20vh;
+.col-4.nav{
+    position: fixed;
 }
 
-.col-4.nav
+.col-3.nav
 {
     font-family: 'ArchivoNarrowRegular';
-    
-    color: rgb(0, 0, 0);
+    font-size: large;
+
+    color: rgb(255, 255, 255);
+
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    transition: 1s;
-    background-color: rgba(255, 255, 255, 0.349);
+    position: relative;
 }
 
-.col-4.nav:hover
+.col-3.nav::before
 {
-    transition: 1s;
-    background-color: gray;
+    position: absolute; /* make the pseudo-element an absolutely positioned element */
+    content: ""; /* insert an empty content */
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-width: thick;
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-color: white;
+
+    transform: scaleX(0);  
+    transition: .75s ease-out;
+
+    z-index: -1;
+}
+
+.col-3.nav:hover::before {
+  transform: scaleX(1);
+}
+
+.col-4.center{
+    height: 650px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+}
+  
+iframe{
+    margin: auto;
 }
 
 .col-12.CenterTop
@@ -111,16 +143,11 @@ a:active { text-decoration: none;}
     height: 40vh;
 }
 
-body{
-    background-image: url('Images/Black-Animation-Background.svg');
-    background-size: cover;
-}
-
 .NameB{
     font-family: 'ArchivoNarrowRegular';
     font-weight: bold;
     font-style: normal; 
-    font-size: 4em;
+    font-size: 6em;
     color: white;
     text-align: center;
     opacity: 0;
@@ -131,4 +158,8 @@ body{
 .NameB.visible {
   opacity: 1;
   transform: none;
+}
+
+.certs{
+    padding-top: 10%;
 }
