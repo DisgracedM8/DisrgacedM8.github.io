@@ -6,23 +6,48 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/archivo-narrow" type="text/css"/> 
-
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="Java.js"></script> 
 </header>
 
 <body>
-    <a href="index.html"><div class="col-3 nav">Home</div></a>
-    <a href="resume.html"><div class="col-3 nav">Resume</div></a>
-    <a href="portfolio.html"><div class="col-3 nav">Portfolio</div></a>
-    <a href="certification.html"><div class="col-3 nav">Certifications</div></a>
-        
-        <div class="col-4"></div>
-    
-        <div class="col-4">
+    <ul class="nav">
+        <a href="#first" onclick="document.getElementById('first').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Home</li></a>
+        <a href="#second" onclick="document.getElementById('second').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Resume</li></a>
+        <a href="#third" onclick="document.getElementById('third').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Portfolio</li></a>
+        <a href="#fourth" onclick="document.getElementById('fourth').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Certifications</li></a>
+    </ul>    
+
+    <div id="first">
+        <div class="col-4 viewHeight"></div>
+        <div class="col-4 viewHeight">
             <div class="col-12 CenterTop"></div>
             <div class="NameB">Jayden Quallio</div>
         </div>
+        <div class="col-4 viewHeight"></div>
+    </div>
 
-        <div class="col-4"></div>
+    <div id="second">
+        <div class="col-4 viewHeight"></div>
+        <div class="col-4 viewHeight">
+
+        </div>
+        <div class="col-4 viewHeight"></div>
+    </div>
+
+    <div id="third">
+        <div class="col-4 viewHeight"></div>
+        <div class="col-4 viewHeight">
+
+        </div>
+        <div class="col-4 viewHeight"></div>
+    </div>
+
+    <div id="fourth">
+        <div class="col-4 viewHeight"></div>
+        <div class="col-4 viewHeight">
+
+        </div>
+        <div class="col-4 viewHeight"></div>
+    </div>
 </body>

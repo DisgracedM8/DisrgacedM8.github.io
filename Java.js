@@ -1,5 +1,29 @@
 $( document ).ready(function() {
-    
+
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  // Add a click event listener to each link
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Prevent the default behavior of the link
+      e.preventDefault();
+  
+      // Get the target element
+      const target = document.querySelector(this.getAttribute('href'));
+  
+      // Check if the `scrollIntoView` method is supported
+      if (target.scrollIntoView) {
+        // If it is supported, use it to smoothly scroll to the target element
+        target.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // If it is not supported, use the `scrollTop` method with jQuery
+        $('html, body').animate({
+          scrollTop: $(target).offset().top
+        }, 500, 'linear');
+      }
+    });
+  });
+
     var taged = $(".NameB");
 
     for (var i = 0; i < taged.length; i++) {
@@ -11,14 +35,19 @@ $( document ).ready(function() {
         var pageTop = $(document).scrollTop();
         var pageBottom = pageTop + $(window).height();
         var tags = $(".NameB");
+        var tagsN = $(".nav");
 
         for (var i = 0; i < tags.length; i++) {
           var tag = tags[i];
+          var tagn = tagsN[i];
           if ($(tag).position().top > pageTop / .5) {
             $(tag).addClass("visible");
+            $(tagn).removeClass("navHover");
           } 
           else {
             $(tag).removeClass("visible");
+            $(tagn).addClass("navHover");
+
           }
         }
       });

@@ -29,10 +29,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-    background-image: url('Images/Black-Animation-Background.svg');
-    background-size: cover;
+body{
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -61,6 +59,10 @@ a:active { text-decoration: none;}
     min-height: 1px;
 }
 
+[class*="viewHeight"] {
+    height: 100vh;
+}
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%}
@@ -76,39 +78,77 @@ a:active { text-decoration: none;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    .col-3.nav
+    .hovered
     {
-        text-align: center;
         padding-top: 1% !important;
         padding-bottom: 1% !important;
     }
 }
 
-.col-4.nav{
-    position: fixed;
+#first {
+    background-image: url('Images/Black-Animation-Background.svg');
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 5px 10px 10px 10px;
 }
 
-.col-3.nav
-{
+#second{
+    background-color: orange;
+    background-size: cover;
+    height: 100vh;
+}
+
+#third{
+    background-color: steelblue;
+    background-size: cover;
+    height: 100vh;
+}
+
+#fourth{
+    background-color: pink;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav.navHover{
+    background-color: rgba(109, 109, 109, 0.199);
+    z-index: 1;
+}
+
+a {
     font-family: 'ArchivoNarrowRegular';
     font-size: large;
-
     color: rgb(255, 255, 255);
-
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    position: relative;
+    text-decoration: none;
 }
 
-.col-3.nav::before
+.hovered{
+    display: block;
+    width: 25%;
+    float: left;
+    position: relative;
+
+}
+
+.hovered::before
 {
-    position: absolute; /* make the pseudo-element an absolutely positioned element */
-    content: ""; /* insert an empty content */
+    content: "";
+    position: absolute;
     
     top: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
 
@@ -116,14 +156,14 @@ a:active { text-decoration: none;}
     box-sizing: border-box;
     border-bottom-style: solid;
     border-color: white;
-
-    transform: scaleX(0);  
-    transition: .75s ease-out;
+  
+   transition: transform .75s ease-out;
+   transform: scaleX(0);
 
     z-index: -1;
 }
 
-.col-3.nav:hover::before {
+.hovered:hover::before {
   transform: scaleX(1);
 }
 
