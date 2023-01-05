@@ -82,6 +82,7 @@ a:active { text-decoration: none;}
     {
         padding-top: 1% !important;
         padding-bottom: 1% !important;
+        width: 25% !important;
     }
 }
 
@@ -135,10 +136,11 @@ a {
 
 .hovered{
     display: block;
-    width: 25%;
     float: left;
     position: relative;
-
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .hovered::before
