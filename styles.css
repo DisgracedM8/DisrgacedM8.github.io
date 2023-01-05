@@ -1,4 +1,3 @@
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,15 +51,68 @@ a:hover { text-decoration: none;}
 a:focus { text-decoration: none;}
 a:active { text-decoration: none;}
 
+#first {
+
+    background-image: url('Images/Wave-10s-2560px.svg'), url('Images/Black-Animation-Background.svg');
+
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position:center, center;
+    z-index: 0;
+    position: relative;
+
+    height: 100vh;
+}
+
+#second{
+    background-image: url('Images/Ocean-2.5s-1920px.svg'), url('Images/Black-Animation-Background.svg');
+    
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position:center, center;
+    position: relative;
+    
+    z-index: -1;
+    height: 200vh;
+}
+
+#third{
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    height: 100vh;
+    z-index: -2;
+}
+
+#fourth{
+    background-color: pink;
+    background-size: cover;
+    background-position: center;
+    position: static;
+
+    height: 100vh;
+    z-index: -3;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
     float: left;
-    min-height: 1px;
 }
 
 [class*="viewHeight"] {
     height: 100vh;
+}
+
+.hovered{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -80,67 +132,10 @@ a:active { text-decoration: none;}
 
     .hovered
     {
-        padding-top: 1% !important;
-        padding-bottom: 1% !important;
-        width: 25% !important;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 25%;
     }
-}
-
-#first {
-    background-image: url('Images/Black-Animation-Background.svg');
-    background-size: cover;
-    height: 100vh;
-    box-shadow: 5px 10px 10px 10px;
-}
-
-#second{
-    background-color: orange;
-    background-size: cover;
-    height: 100vh;
-}
-
-#third{
-    background-color: steelblue;
-    background-size: cover;
-    height: 100vh;
-}
-
-#fourth{
-    background-color: pink;
-    background-size: cover;
-    height: 100vh;
-}
-
-.nav{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.nav.navHover{
-    background-color: rgba(109, 109, 109, 0.199);
-    z-index: 1;
-}
-
-a {
-    font-family: 'ArchivoNarrowRegular';
-    font-size: large;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-}
-
-.hovered{
-    display: block;
-    float: left;
-    position: relative;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
 }
 
 .hovered::before
@@ -169,6 +164,47 @@ a {
   transform: scaleX(1);
 }
 
+.nav{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav.navHover{
+    background-color: rgba(109, 109, 109, 0.199);
+}
+
+a {
+    font-family: 'ArchivoNarrowRegular';
+    font-size: large;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondBack{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: static;
+
+    height: 200vh;
+}
+
+.thirdBack{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -30vh;
+    position: static;
+
+    height: 200vh;
+}
+
 .col-4.center{
     height: 650px;
     padding-top: 5%;
@@ -189,12 +225,14 @@ iframe{
     font-family: 'ArchivoNarrowRegular';
     font-weight: bold;
     font-style: normal; 
-    font-size: 6em;
+    font-size: 6rem;
     color: white;
     text-align: center;
     opacity: 0;
     transform: translateY(20vh);
     transition: opacity 1.5s ease-in-out, transform 1.75s ease-out;
+    position: relative;
+    z-index: 5;
 }
 
 .NameB.visible {
@@ -203,5 +241,11 @@ iframe{
 }
 
 .certs{
-    padding-top: 10%;
+    position: relative;
+    z-index: 100;
+}
+
+.height3{
+    height: 33%;
+    position: relative;
 }
