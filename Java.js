@@ -34,19 +34,14 @@ $( document ).ready(function() {
     $(document).on("scroll", function() {
         var pageTop = $(document).scrollTop();
         var tags = $(".NameB");
-        var tagsN = $(".nav");
 
         for (var i = 0; i < tags.length; i++) {
           var tag = tags[i];
-          var tagn = tagsN[i];
           if ($(tag).position().top > pageTop / .5) {
             $(tag).addClass("visible");
-            $(tagn).removeClass("navHover");
           } 
           else {
             $(tag).removeClass("visible");
-            $(tagn).addClass("navHover");
-
           }
         }
       });

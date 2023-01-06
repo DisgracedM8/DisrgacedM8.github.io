@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,51 +45,60 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+a {
+    font-family: 'ArchivoNarrowRegular';
+    font-size: large;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
 a:hover { text-decoration: none;}
 a:focus { text-decoration: none;}
 a:active { text-decoration: none;}
 
-#first {
-
-    background-image: url('Images/Wave-10s-2560px.svg'), url('Images/Black-Animation-Background.svg');
+#fBackground {
+    background-image: url('Images/Ocean-2.5s-1920px.svg'), url("Images/Bubble-166.7s-2560px.svg");
 
     background-size: cover, cover;
-    background-repeat: no-repeat;
-    background-position:center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-position:bottom, center;
     z-index: 0;
     position: relative;
 
     height: 100vh;
 }
 
-#second{
-    background-image: url('Images/Ocean-2.5s-1920px.svg'), url('Images/Black-Animation-Background.svg');
-    
-    background-size: cover, cover;
-    background-repeat: no-repeat;
-    background-position:center, center;
+#first{
     position: relative;
-    
+    height: 100vh;
     z-index: -1;
-    height: 200vh;
+}
+
+#second{
+    background-color: #62a5d5;
+
+    position: relative;
+    height: 100vh;
+    z-index: -2;
 }
 
 #third{
-    background-color: aqua;
+    background-color: rgb(0,0,0,0);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     position: relative;
 
     height: 100vh;
-    z-index: -2;
+    z-index: -1;
 }
 
 #fourth{
     background-color: pink;
     background-size: cover;
     background-position: center;
-    position: static;
+    position: relative;
 
     height: 100vh;
     z-index: -3;
@@ -113,6 +121,32 @@ a:active { text-decoration: none;}
     width: 100%;
     padding-top: 3%;
     padding-bottom: 3%;
+}
+
+.hovered::before
+{
+    content: "";
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    border-width: thick;
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-color: white;
+  
+   transition: transform .75s;
+   transform: scaleX(0);
+
+    z-index: -1;
+}
+
+.hovered:hover::before {
+  transform: scaleX(1);
 }
 
 @media only screen and (min-width: 768px) {
@@ -138,30 +172,8 @@ a:active { text-decoration: none;}
     }
 }
 
-.hovered::before
-{
-    content: "";
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-
-    border-width: thick;
-    box-sizing: border-box;
-    border-bottom-style: solid;
-    border-color: white;
-  
-   transition: transform .75s ease-out;
-   transform: scaleX(0);
-
-    z-index: -1;
-}
-
-.hovered:hover::before {
-  transform: scaleX(1);
+.heightMod{
+    height: 200vh;
 }
 
 .nav{
@@ -175,57 +187,11 @@ a:active { text-decoration: none;}
     z-index: 10;
 }
 
-.nav.navHover{
-    background-color: rgba(109, 109, 109, 0.199);
-}
-
-a {
-    font-family: 'ArchivoNarrowRegular';
-    font-size: large;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-}
-
-.secondBack{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: static;
-
-    height: 200vh;
-}
-
-.thirdBack{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -30vh;
-    position: static;
-
-    height: 200vh;
-}
-
-.col-4.center{
-    height: 650px;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: flex;
-}
-  
-iframe{
-    margin: auto;
-}
-
-.col-12.CenterTop
-{
-    height: 40vh;
-}
-
 .NameB{
     font-family: 'ArchivoNarrowRegular';
     font-weight: bold;
     font-style: normal; 
-    font-size: 6rem;
+    font-size: 6em;
     color: white;
     text-align: center;
     opacity: 0;
@@ -240,12 +206,7 @@ iframe{
   transform: none;
 }
 
-.certs{
-    position: relative;
-    z-index: 100;
-}
-
-.height3{
-    height: 33%;
-    position: relative;
+.NameB.CenterTop
+{
+    padding-top: 35vh;
 }
