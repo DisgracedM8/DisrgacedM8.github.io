@@ -63,7 +63,7 @@ a:active { text-decoration: none;}
     background-size: cover, cover;
     background-repeat: no-repeat, no-repeat;
     background-position:bottom, center;
-    z-index: 0;
+    z-index: 1;
     position: relative;
 
     height: 100vh;
@@ -80,38 +80,31 @@ a:active { text-decoration: none;}
 
     position: relative;
     height: 100vh;
-    z-index: -2;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418) ;
+    z-index: 1;
 }
 
 #third{
-    background-color: rgb(0,0,0,0);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #6c7278;
     position: relative;
 
     height: 100vh;
-    z-index: -1;
-}
-
-#fourth{
-    background-color: pink;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    height: 100vh;
-    z-index: -3;
+    z-index: 0;
 }
 
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
     float: left;
+    min-height: 1px;
 }
 
 [class*="viewHeight"] {
     height: 100vh;
+}
+
+[class*="halfHeight"] {
+    height: 50vh;
 }
 
 .hovered{
