@@ -63,15 +63,15 @@ a:active { text-decoration: none;}
     background-size: cover, cover;
     background-repeat: no-repeat, no-repeat;
     background-position:bottom, center;
-    z-index: 1;
+    z-index: -10;
     position: relative;
 
-    height: 100vh;
+    height: 100%;
 }
 
 #first{
     position: relative;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -79,16 +79,16 @@ a:active { text-decoration: none;}
     background-color: #62a5d5;
 
     position: relative;
-    height: 100vh;
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418) ;
+    height: 100%;
+    
+    box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.418) ;
     z-index: 1;
 }
 
 #third{
     background-color: #6c7278;
     position: relative;
-
-    height: 100vh;
+    height: 100%;
     z-index: 0;
 }
 
@@ -100,11 +100,19 @@ a:active { text-decoration: none;}
 }
 
 [class*="viewHeight"] {
-    height: 100vh;
+    height: 100%;
 }
 
 [class*="halfHeight"] {
-    height: 50vh;
+    height: 50%;
+    padding-top: 10%;
+}
+
+[class*="center"] {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .hovered{
@@ -166,7 +174,7 @@ a:active { text-decoration: none;}
 }
 
 .heightMod{
-    height: 200vh;
+    height: 100vh;
 }
 
 .nav{
@@ -181,6 +189,8 @@ a:active { text-decoration: none;}
 }
 
 .NameB{
+    padding-top: 20%;
+
     font-family: 'ArchivoNarrowRegular';
     font-weight: bold;
     font-style: normal; 
@@ -188,7 +198,7 @@ a:active { text-decoration: none;}
     color: white;
     text-align: center;
     opacity: 0;
-    transform: translateY(20vh);
+    transform: translateY(20%);
     transition: opacity 1.5s ease-in-out, transform 1.75s ease-out;
     position: relative;
     z-index: 5;
@@ -199,7 +209,34 @@ a:active { text-decoration: none;}
   transform: none;
 }
 
-.NameB.CenterTop
-{
-    padding-top: 35vh;
+.block{
+    background-color: steelblue;
+    height: 37.5%;
+    width: 75%;
+    transition: .5s;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.block::before{
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px 0px black;
+}
+
+
+.block:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.block::before:hover{
+    background-color: steelblue;
+    transition: .5s;
 }
