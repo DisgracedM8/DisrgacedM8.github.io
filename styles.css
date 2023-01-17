@@ -45,24 +45,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a {
-    font-family: 'ArchivoNarrowRegular';
-    font-size: large;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-}
+
 a:hover { text-decoration: none;}
 a:focus { text-decoration: none;}
 a:active { text-decoration: none;}
 
 #fBackground {
-    background-image: url('Images/Ocean-2.5s-1920px.svg'), url("Images/Bubble-166.7s-2560px.svg");
 
-    background-size: cover, cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position:bottom, center;
     z-index: 0;
     position: relative;
 
@@ -70,26 +59,38 @@ a:active { text-decoration: none;}
 }
 
 #first{
+    background-image:url("Images/Bubble-166.7s-1920px.svg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 #second{
-    background-color: #62a5d5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    background-color: #e4e5e6;
 
     position: relative;
-    height: 100%;
+    height: 200%;
     
-    box-shadow: 0px 15px 5px 0px rgba(0, 0, 0, 0.418) ;
     z-index: 2;
 }
 
 #third{
-    background-color: #414447;
+    background-color: #f1f2f3;
     position: relative;
     height: 100%;
     z-index: 1;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* For mobile phones: */
@@ -115,7 +116,26 @@ a:active { text-decoration: none;}
     flex-wrap: wrap;
 }
 
+#Name{
+    font-family: 'ArchivoNarrowRegular';
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
 .hovered{
+    font-family: 'ArchivoNarrowRegular';
+    font-size: 1.75em;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    text-align: center;
+    text-decoration: none;
+
     display: block;
     float: left;
     position: relative;
@@ -138,7 +158,7 @@ a:active { text-decoration: none;}
     border-width: thick;
     box-sizing: border-box;
     border-bottom-style: solid;
-    border-color: white;
+    border-color: rgb(37, 37, 37);
   
    transition: transform .75s;
    transform: scaleX(0);
@@ -147,7 +167,7 @@ a:active { text-decoration: none;}
 }
 
 .hovered:hover::before {
-  transform: scaleX(1);
+  transform: scaleX(.5);
 }
 
 @media only screen and (min-width: 768px) {
@@ -169,7 +189,14 @@ a:active { text-decoration: none;}
     {
         padding-top: 1%;
         padding-bottom: 1%;
-        width: 25%;
+        width: 12.5%;
+    }
+    #Name{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 50%;
+        padding-left: 10%;
+        text-align: unset;
     }
 }
 
@@ -177,8 +204,7 @@ a:active { text-decoration: none;}
     height: 100vh;
 }
 
-.nav{
-    text-align: center;
+#nav{
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -195,7 +221,7 @@ a:active { text-decoration: none;}
     font-weight: bold;
     font-style: normal; 
     font-size: 6em;
-    color: white;
+    color: rgb(37, 37, 37);
     text-align: center;
     opacity: 0;
     transform: translateY(20%);

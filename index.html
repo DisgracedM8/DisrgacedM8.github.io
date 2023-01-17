@@ -12,14 +12,15 @@
 
 <body>
     
-    <ul class="nav">
-        <a href="#first" onclick="document.getElementById('first').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Home</li></a>
-        <a href="#second" onclick="document.getElementById('second').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Portfolio</li></a>
-        <a href="#third" onclick="document.getElementById('third').scrollIntoView({behavior: 'smooth'})"><li class="hovered">Certifications</li></a>
-        <a href="https://drive.google.com/file/d/1F0svVPTqk1Z6DsiQNvaNVpa1OOBjxAYH/view?usp=share_link"><li class="hovered">Resume</li></a>
-    </ul>   
-<div class="heightMod">
-    <div id="fBackground">
+    <nav id="nav">
+        <div id="Name">Jayden Quallio</div>
+        <a href="#first" onclick="document.getElementById('first').scrollIntoView({behavior: 'smooth'})"><div class="hovered">Home</div></a>
+        <a href="#second" onclick="document.getElementById('second').scrollIntoView({behavior: 'smooth'})"><div class="hovered">Portfolio</div></a>
+        <a href="#third" onclick="document.getElementById('third').scrollIntoView({behavior: 'smooth'})"><div class="hovered">Certifications</div></a>
+        <a href="https://drive.google.com/file/d/1F0svVPTqk1Z6DsiQNvaNVpa1OOBjxAYH/view?usp=share_link"><div class="hovered">Resume</div></a>
+    </nav>   
+
+    <div class="heightMod">
 
         <div id="first">
             <div class="col-12 viewHeight">
@@ -27,28 +28,24 @@
             </div>
         </div>
 
+
         <div id="second">
             <div class="col-3 viewHeight"></div>
             <div class="col-3 viewHeight"></div>
             <div class="col-3 viewHeight"></div>
             <div class="col-3 viewHeight"></div>
         </div>
+
         <div id="third">
+            <div class="col-4 viewHeight center">
+            </div>
+            
+            <div class="col-4 viewHeight center">
+            </div>
 
             <div class="col-4 viewHeight center">
-               <div class="block"><p>test</p></div>
-               <div class="block"><p>test</p></div>
-           </div>
-           <div class="col-4 viewHeight center">
-               <div class="block"><p>test</p></div>
-               <div class="block"><p>test</p></div>
-           </div>
-           <div class="col-4 viewHeight center">
-               <div class="block"><p>test</p></div>
-               <div class="block"><p>test</p></div>
-           </div>
-       </div>
-    </div>
+            </div>
+        </div>
 
-</div>
+    </div>
 </body>

@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+  
   const links = document.querySelectorAll('a[href^="#"]');
 
   // Add a click event listener to each link
