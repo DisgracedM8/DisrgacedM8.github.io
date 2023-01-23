@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/test.loader.js";
+      var loaderUrl = buildUrl + "/hold.loader.js";
       var config = {
-        dataUrl: buildUrl + "/test.data.br",
-        frameworkUrl: buildUrl + "/test.framework.js.br",
-        codeUrl: buildUrl + "/test.wasm.br",
+        dataUrl: buildUrl + "/hold.data",
+        frameworkUrl: buildUrl + "/hold.framework.js",
+        codeUrl: buildUrl + "/hold.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Tictac Toes",
@@ -88,8 +88,6 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
