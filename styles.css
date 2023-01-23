@@ -149,13 +149,12 @@ footer img{
 * {
     box-sizing: border-box;
     color-scheme: normal;
+    overflow-x: hidden;
 }
 
 /* For mobile phones: */
 [class^="col-"] {
-    width: 1fr;
-    float: left;
-    min-height: 1px;
+    width: 100%;
 }
 
 [class *="viewHeight"] {
@@ -228,6 +227,11 @@ p{
 }
 
 @media only screen and (min-width: 768px) {
+    [class^="col-"] {
+        width: 100%;
+        content: "";
+        float: left;
+    }
     /* For desktop: */
     .col-1 {width: 8.33%}
     .col-2 {width: 16.66%}
