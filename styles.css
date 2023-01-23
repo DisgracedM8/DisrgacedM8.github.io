@@ -97,7 +97,7 @@ footer img{
     background-color: #dadadb;
 
     position: relative;
-    height: 80%;
+    height: 85%;
     
     z-index: 2;
 }
@@ -107,7 +107,7 @@ footer img{
     background-repeat: no-repeat;
     background-position: bottom;
 
-    background-color: #dadadb;
+    /*background-color: #dadadb;*/
 
     position: relative;
     height: 100%;
@@ -116,7 +116,8 @@ footer img{
 }
 
 #third{
-    background-color: rgb(192, 192, 192);
+    /*background-color: rgb(192, 192, 192);*/
+    background-color: #dadadb;
     position: relative;
     height: 100%;
     z-index: 1;
@@ -125,7 +126,7 @@ footer img{
 .inBetween{
     background-color: rgb(192, 192, 192);
     position: relative;
-    height: 20%;
+    height: 15%;
 }
 
 .inBetween > div{
@@ -152,12 +153,12 @@ footer img{
 
 /* For mobile phones: */
 [class^="col-"] {
-    width: 100%;
+    width: 1fr;
     float: left;
     min-height: 1px;
 }
 
-[class $="viewHeight"] {
+[class *="viewHeight"] {
     height: 100%;
 }
 
@@ -186,7 +187,7 @@ p{
 
 .hovered{
     font-family: 'poppins';
-    font-size: 1.75em;
+    font-size: 1em;
     font-weight: bold;
     color: rgb(37, 37, 37);
     text-align: center;
@@ -245,7 +246,7 @@ p{
     {
         padding-top: 1%;
         padding-bottom: 1%;
-        width: 10%;
+        width: 12.5%;
     }
     #Name{
         padding-top: 1%;
@@ -276,7 +277,6 @@ p{
 }
 
 .NameB{
-    padding-top: 20%;
 
     font-family: 'poppins';
     font-weight: bold;
@@ -286,7 +286,7 @@ p{
     text-align: center;
     opacity: 0;
     transform: translateY(20%);
-    transition: opacity 1.5s ease-in-out, transform 1.75s ease-out;
+    transition: opacity .75s ease-in-out, transform 1s ease-out;
     position: relative;
     z-index: 5;
 }
@@ -319,7 +319,6 @@ p{
 
 }
 
-
 .block:hover{
     transform: scale(110%);
     transition: .5s;
@@ -328,4 +327,42 @@ p{
 .block:hover::before{
     box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.514);
     transition: .5s;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+.hidden:nth-child(2){
+    transition-delay: 100ms;
+}
+
+
+.hidden:nth-child(3){
+    transition-delay: 200ms;
+}
+
+
+.hidden:nth-child(4){
+    transition-delay: 300ms;
+}
+
+.hidden:nth-child(5){
+    transition-delay: 400ms;
 }

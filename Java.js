@@ -2,6 +2,34 @@ $( document ).ready(function() {
   
   const links = document.querySelectorAll('a[href^="#"]');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElements2 = document.querySelectorAll('.hidden2');
+
+  hiddenElements2.forEach((el) => observer.observe(el));
+
   // Add a click event listener to each link
   links.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -37,7 +65,7 @@ $( document ).ready(function() {
 
         for (var i = 0; i < tags.length; i++) {
           var tag = tags[i];
-          if ($(tag).position().top > pageTop / .5) {
+          if ($(tag).position().top > pageTop / .15) {
             $(tag).addClass("visible");
           } 
           else {
@@ -45,6 +73,7 @@ $( document ).ready(function() {
           }
         }
       });
+      
 });
 
 
