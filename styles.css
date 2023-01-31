@@ -54,7 +54,7 @@ table {
 }
 
 *{
-	color: white !important;
+	color: white;
 }
 
 .backgroundColor1{
@@ -69,6 +69,10 @@ table {
 	height: 15%;
 }
 
-.custom-navbar{
-	background-color: #00FF0000 !important;
+.color-cyan{
+	color: cyan;
+}
+
+.heading-text > h2{
+	font-size: 3em;
 }
