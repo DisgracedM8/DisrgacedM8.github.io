@@ -76,3 +76,7 @@ table {
 .heading-text > h2{
 	font-size: 3em;
 }
+
+.img-icon{
+	max-width: 40%!important;
+}
