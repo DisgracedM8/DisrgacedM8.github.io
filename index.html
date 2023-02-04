@@ -15,6 +15,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="java.js"></script>
 </head>
 
 <body>
@@ -51,24 +55,26 @@
     </div>
   </nav>
 
-  <main>
-    <div class="container-fluid">
+  <main class="container-fluid">
       <div class="row backgroundColor2 vh-100" id="Top-Section">
-        <div class="col-md-12 position-relative h-100">
+        <div class="col-md-12 position-relative">
           <div class="position-absolute top-50 start-50 translate-middle heading-text">
-            <h2>Junior Programmer</h2>
-            <h2 class="color-cyan">& Game Developer</h2>
+            <div class="NameB">
+              <h2>Junior Programmer</h2>
+              <h2 class="color-cyan">& Game Developer</h2>
+            </div>
           </div>
         </div>
       </div>
       <div class="row backgroundColor1 vh-100" id="about">
         <div class="col-md-6 position-relative">
           <div class="position-absolute top-50 start-50 translate-middle h-10">
-            <img src="Assets/me.jpg" class="img-fluid rounded" alt="Picture of Jayden">
+            <img src="Assets/me.jpg" class="img-fluid rounded hidden" alt="Picture of Jayden">
           </div>
         </div>
         <div class="col-md-6 position-relative overflow-x-hidden">
-          <p class="hidden2 position-absolute top-50 start-50 translate-middle">
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <p class="hidden2">
             My Name is Jayden Quallio and I am a software developer with experience in creating games using C# and apps
             using swift, and I have a passion for creating innovative and engaging software solutions. <br><br>
 
@@ -84,40 +90,40 @@
 
             If you're looking for a developer with a strong work ethic and a passion for creating great software, I
             would be a great fit for your team.
-          </p>
-        </div>
-      </div>
-      <div class="row backgroundColor2">
-        <div class="col-md-2"></div>
-        <div class="col-md-2"><img src="Assets/c.png" class="img-fluid img-icon" alt="C Sharp"></div>
-        <div class="col-md-2"><img src="Assets/swift.png" class="img-fluid img-icon" alt="Swift"></div>
-        <div class="col-md-2"><img src="Assets/unity.png" class="img-fluid img-icon" alt="Unity"></div>
-        <div class="col-md-2"><img src="Assets/adobe.png" class="img-fluid img-icon" alt="Adobe"></div>
-        <div class="col-md-2"></div>
-      </div>
-
-      <div class="backgroundColor1 h-auto row" id="portfolio">
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-12">l</div>
-            <div class="col-md-12">w</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-6">e</div>
-            <div class="col-md-6">e</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-12">eer</div>
-            <div class="col-md-12">err</div>
+            </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="row backgroundColor2">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"><img src="Assets/c.png" class="img-fluid img-icon hidden mx-auto" alt="C Sharp"></div>
+      <div class="col-md-2"><img src="Assets/swift.png" class="img-fluid img-icon hidden" alt="Swift"></div>
+      <div class="col-md-2"><img src="Assets/unity.png" class="img-fluid img-icon hidden" alt="Unity"></div>
+      <div class="col-md-2"><img src="Assets/adobe.png" class="img-fluid img-icon hidden" alt="Adobe"></div>
+      <div class="col-md-2"></div>
+    </div>
 
+    <div class="backgroundColor1 h-auto row" id="portfolio">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">l</div>
+          <div class="col-md-12">w</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">e</div>
+          <div class="col-md-6">e</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">eer</div>
+          <div class="col-md-12">err</div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="bg-dark text-white py-3">
     <div class="container-fluid">
