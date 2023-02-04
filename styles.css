@@ -80,3 +80,15 @@ table {
 .img-icon{
 	max-width: 40%!important;
 }
+
+.half-height{
+	height: 50vh;
+}
+
+.nav-link{
+	color: rgb(236, 236, 236)!important;
+}
+
+.nav-link:hover{
+	color: white!important;
+}
