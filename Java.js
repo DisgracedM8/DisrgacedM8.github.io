@@ -1,79 +1,58 @@
 $( document ).ready(function() {
   
-  const links = document.querySelectorAll('a[href^="#"]');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  });
-
-  const hiddenElements = document.querySelectorAll('.hidden');
-
-  hiddenElements.forEach((el) => observer.observe(el));
-
-  const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  });
-
-  const hiddenElements2 = document.querySelectorAll('.hidden2');
-
-  hiddenElements2.forEach((el) => observer.observe(el));
-
-  // Add a click event listener to each link
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Prevent the default behavior of the link
-      e.preventDefault();
+    const links = document.querySelectorAll('a[href^="#"]');
   
-      // Get the target element
-      const target = document.querySelector(this.getAttribute('href'));
-  
-      // Check if the `scrollIntoView` method is supported
-      if (target.scrollIntoView) {
-        // If it is supported, use it to smoothly scroll to the target element
-        target.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        // If it is not supported, use the `scrollTop` method with jQuery
-        $('html, body').animate({
-          scrollTop: $(target).offset().top
-        }, 500, 'linear');
-      }
-    });
-  });
-
-    var taged = $(".NameB");
-
-    for (var i = 0; i < taged.length; i++) {
-      var tags = taged[i];
-        $(tags).addClass("visible");
-    }
-
-    $(document).on("scroll", function() {
-        var pageTop = $(document).scrollTop();
-        var tags = $(".NameB");
-
-        for (var i = 0; i < tags.length; i++) {
-          var tag = tags[i];
-          if ($(tag).position().top > pageTop / .15) {
-            $(tag).addClass("visible");
-          } 
-          else {
-            $(tag).removeClass("visible");
-          }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        } else{
+          entry.target.classList.remove('show');
         }
       });
-      
-});
-
-
+    });
+  
+    const hiddenElements = document.querySelectorAll('.hidden');
+  
+    hiddenElements.forEach((el) => observer.observe(el));
+  
+    const observer2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        } else{
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+  
+    const hiddenElements2 = document.querySelectorAll('.hidden2');
+  
+    hiddenElements2.forEach((el) => observer.observe(el));
+    
+      var taged = $(".NameB");
+  
+      for (var i = 0; i < taged.length; i++) {
+        var tags = taged[i];
+          $(tags).addClass("visible");
+      }
+  
+      $(document).on("scroll", function() {
+          var pageTop = $(document).scrollTop();
+          var tags = $(".NameB");
+  
+          for (var i = 0; i < tags.length; i++) {
+            var tag = tags[i];
+            if ($(tag).position().top > pageTop / .15) {
+              $(tag).addClass("visible");
+            } 
+            else {
+              $(tag).removeClass("visible");
+            }
+          }
+        });
+        
+  });
+  
+  
+  
