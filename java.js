@@ -1,5 +1,14 @@
 $( document ).ready(function() {
   
+  window.onscroll = function() {
+    const navbar = document.querySelector('.navbar-bgoff');
+    if (window.pageYOffset > 0) {
+      navbar.classList.add('navbar-bgon');
+    } else {
+      navbar.classList.remove('navbar-bgon');
+    }
+  };
+
     const links = document.querySelectorAll('a[href^="#"]');
   
     const observer = new IntersectionObserver((entries) => {
