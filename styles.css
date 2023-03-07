@@ -200,14 +200,46 @@ table {
 .box-background{
 	height: 60%;
 	width: 80%;
-	background-color: red;
-	background-image: "Assets/c.png";
-	filter: blur(1px);
 	border-radius: 5%;
 	transition: .25s;
+}
 
+#dragonChamps{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
+	filter: blur(1px);
+}
+
+#paperFootball{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
+}
+
+#arRoyale{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
+}
+
+#touchless{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
+}
+
+#vrHub{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
+}
+
+#vrGame{
+	background-image: url("Assets/dragonchamp.png");
+	background-size: cover;
 }
 
 .box-background:hover{
 	transform: scale(110%)!important;
+}
+
+.heightMod{
+	padding-top: 2vh;
+	padding-bottom: 2vh;
 }
