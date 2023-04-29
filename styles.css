@@ -122,6 +122,12 @@ table {
 	max-width: 40% !important;
 }
 
+.imgIco{
+	max-width: 32px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .NameB {
 	opacity: 0;
 	transform: translateY(80%);
