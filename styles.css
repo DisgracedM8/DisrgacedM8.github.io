@@ -210,35 +210,52 @@ table {
 	transition: .25s;
 }
 
+.maxPhoto{
+	max-height: 500px;
+	max-width: 500px;
+}
+
 #dragonChamps{
 	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
-	filter: blur(1px);
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
 #paperFootball{
-	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
+	background-image: url("Assets/finger_football.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
 #arRoyale{
-	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
+	background-image: url("Assets/Cool Text - ARRoyale 434612775732168.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
-#touchless{
-	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
+#theRooms{
+	background-image: url("Assets/Backrooms_model.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
 #vrHub{
-	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
+	background-image: url("Assets/MJNLogoRed.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position: center;
 }
 
-#vrGame{
-	background-image: url("Assets/dragonchamp.png");
-	background-size: cover;
+#ballGame{
+	background-image: url("Assets/PrimitiveCapsule.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: center;
+
 }
 
 .box-background:hover{
