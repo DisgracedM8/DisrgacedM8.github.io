@@ -266,3 +266,8 @@ table {
 	padding-top: 2vh;
 	padding-bottom: 2vh;
 }
+
+.bean{
+	background: url("Assets/BeanGif.gif") no-repeat center center fixed; 
+	background-size: cover;
+}
