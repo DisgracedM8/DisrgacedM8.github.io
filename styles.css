@@ -268,6 +268,8 @@ table {
 }
 
 .bean{
-	background: url("Assets/BeanGif.gif") no-repeat center center fixed; 
-	background-size: cover;
+	position:absolute;
+	width: 100vh;
+	height: auto;
+	object-fit: cover;
 }
