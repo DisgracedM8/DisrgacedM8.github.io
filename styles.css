@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,29 +91,49 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 * {
 	color: white;
 	font-family: Oswald !important;
@@ -110,7 +198,7 @@ table {
 	background-color: black;
 }
 
-.backgroundColor3{
+.backgroundColor3 {
 	background-color: #171717;
 }
 
@@ -122,7 +210,7 @@ table {
 	max-width: 40% !important;
 }
 
-.imgIco{
+.imgIco {
 	max-width: 32px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -181,9 +269,12 @@ table {
 	justify-content: center !important;
 	align-items: center !important;
 	display: flex !important;
-	flex-direction: column; /* Arrange items vertically */
-	align-items: center; /* Center items horizontally */
-	text-align: center; /* Center text inside elements */
+	flex-direction: column;
+	/* Arrange items vertically */
+	align-items: center;
+	/* Center items horizontally */
+	text-align: center;
+	/* Center text inside elements */
 }
 
 .navbar-bgoff::before {
@@ -210,73 +301,73 @@ table {
 	height: 20vh;
 }
 
-.box-height{
+.box-height {
 	height: 70vh;
 }
 
-.box-background{
-	height: 60%;
-	width: 80%;
+.box-background {
+	height: 100%;
+	width: 100%;
 	border-radius: 5%;
 	transition: .25s;
 }
 
-.maxPhoto{
+.maxPhoto {
 	max-height: 500px;
 	max-width: 500px;
 }
 
-#dragonChamps{
+#dragonChamps {
 	background-image: url("Assets/dragonchamp.png");
-	background-size:contain;
-	background-repeat:no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#paperFootball{
+#paperFootball {
 	background-image: url("Assets/finger_football.png");
-	background-size:contain;
-	background-repeat:no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#arRoyale{
+#arRoyale {
 	background-image: url("Assets/Cool Text - ARRoyale 434612775732168.png");
-	background-size:contain;
-	background-repeat:no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#theRooms{
+#theRooms {
 	background-image: url("Assets/Backrooms_model.jpg");
-	background-size:cover;
-	background-repeat:no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#vrHub{
+#vrHub {
 	background-image: url("Assets/MJNLogoRed.png");
-	background-size:contain;
-	background-repeat:no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
-#ballGame{
+#ballGame {
 	background-image: url("Assets/PrimitiveCapsule.png");
-	background-size:cover;
-	background-repeat:no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
 
 }
 
 
-.heightMod{
+.heightMod {
 	padding-top: 2vh;
 	padding-bottom: 2vh;
 }
 
-.bean{
-	position:absolute;
+.bean {
+	position: absolute;
 	width: 100vh;
 	height: auto;
 	object-fit: cover;
@@ -285,63 +376,81 @@ table {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
 	background-color: transparent;
-	width: 80%;
-	height: 80%;
-	perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+	width: 50%;
+	height: 50%;
+	perspective: 1000px;
+	/* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
 	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
+	-webkit-backface-visibility: hidden;
+	/* Safari */
 	backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
 	color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-	background-color: dodgerblue;
+}
+
+/* Style the back side */
+.flip-card-back {
+	background-color: rgb(77, 77, 77);
 	color: white;
 	transform: rotateY(180deg);
-  }
+	border-radius: 5%;
 
-  /* Width */
+}
+
+
+.youtube {
+	aspect-ratio: 16 / 9;
+	height: 20%;
+	width: auto;
+}
+
+/* Width */
 ::-webkit-scrollbar {
 	width: 12px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
 	background: #1d1d1d;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
 	background: cyan;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #008080; /* Darker cyan color */
-  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #008080;
+	/* Darker cyan color */
+}
+
+a {
+	text-decoration: none !important;
+	
+}
