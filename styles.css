@@ -175,6 +175,17 @@ table {
 	display: flex !important;
 }
 
+.center-flipcon {
+	text-align: center !important;
+	align-content: center !important;
+	justify-content: center !important;
+	align-items: center !important;
+	display: flex !important;
+	flex-direction: column; /* Arrange items vertically */
+	align-items: center; /* Center items horizontally */
+	text-align: center; /* Center text inside elements */
+}
+
 .navbar-bgoff::before {
 	position: absolute;
 	background-color: #131313 !important;
@@ -258,9 +269,6 @@ table {
 
 }
 
-.box-background:hover{
-	transform: scale(110%)!important;
-}
 
 .heightMod{
 	padding-top: 2vh;
@@ -273,3 +281,67 @@ table {
 	height: auto;
 	object-fit: cover;
 }
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+	background-color: transparent;
+	width: 80%;
+	height: 80%;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+	color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+  }
+
+  /* Width */
+::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #1d1d1d;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: cyan;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #008080; /* Darker cyan color */
+  }
